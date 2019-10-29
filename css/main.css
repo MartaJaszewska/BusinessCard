@@ -1,4 +1,5 @@
 :root {
+    --white: rgb(255, 255, 255);
     --dark: rgb(85, 84, 84);
     --gray: rgb(138, 138, 138);
     --violet: rgb(174, 151, 170);
@@ -14,8 +15,8 @@
     clear: both;
 }
 .contener {
-    width: 80%;
-    max-width: 1100px;
+    width: 100%;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -68,20 +69,23 @@
 }
 
 html {
-    background-color: #fff;
+    background-color: var(--white);
     font-family: Montserrat, sans-serif;
     font-size: 62.5%;
 }
 
 body {
-    
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 23px 7px var(--gray);
 }
 
 
 
 header h1 {
     float:left;
-    width: 35%;
+    width: 45%;
     min-width: 200px;
 }
 
@@ -91,7 +95,7 @@ header h1 a {
     height: 60px;
     margin: 5px 0;
     color: var(--gray);
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 400;
     text-decoration:none;
     align-items:center;
@@ -100,7 +104,7 @@ header h1 a {
 
 header nav {
     float:right;
-    width: 65%
+    width: 55%
 }
 
 header nav ul {
@@ -111,8 +115,9 @@ header nav ul {
 header nav ul li {
     display: table-cell;
     height: 70px;
+    width:25%;
     line-height: 70px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--dark);
     text-transform: uppercase;
     text-align:center;
@@ -126,8 +131,99 @@ header nav ul li a {
 header nav ul li:hover {
     background: var(--orange);
     opacity:0.5;
-    color: #fff;
+    color: var(--white);
     font-weight: 700;
+}
+#about {
+    height:350px;
+    padding: 20px 0}
+
+.aboutMe {
+    display: flex;
+    background-image: linear-gradient(to right, rgba(174, 151, 170, 0.3), var(--white));
+    height: 350px;
+    width: 60%;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: var(--dark);
+
+}
+
+.aboutMe h2 {
+    height: 30px;
+    position:relative;
+    top: 15px;
+    left: 95px;
+    
+}
+
+.data {
+    display: flex;
+    background-color: var(--white);
+    box-shadow: 0px 0px 25px 2px var(--gray);
+    height: 260px;
+    min-height: 150px;
+    width: 90%;
+    font-family: Tajawal, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--dark);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -300px;
+    overflow: auto;
+}
+
+.photo {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+}
+
+.photo img {
+    display: block;
+    width:150px;
+    height:150px;
+    border-radius: 10%;
+    box-shadow: 0px 0px 25px 2px var(--gray);
+
+}
+
+.data ul {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    line-height: 2.7rem;
+    min-width: 420px;
+   
+}
+
+.data ul li span {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.data .description {
+    overflow: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-width: 420px;
+
+}
+
+.description p {
+    flex: 5;
+    line-height: 3.5rem;
+    margin: 5px 15px;
+    
 }
 
 
