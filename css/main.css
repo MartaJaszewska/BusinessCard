@@ -7,6 +7,7 @@
     --peach: rgb(255, 176, 156);
     --orange: rgb(255, 206, 125);
     --yellow: rgb(249, 248, 113);
+    --violet-bg: rgba(174, 151, 170, 0.1);
 }
 
 .floatfix::after {
@@ -27,7 +28,7 @@
     background-size: cover;
     opacity: 0.9;
     overflow: hidden;
-    border-top: 4px solid (var(--orange));
+    border-top: 4px solid var(--orange);
     border-bottom: 4px solid var(--orange);
 }
 
@@ -66,6 +67,8 @@
 .icon {
     font-size:2.5rem;
     color: var(--dark);
+    margin: 0 6px;
+
 }
 
 html {
@@ -81,12 +84,16 @@ body {
     box-shadow: 0px 0px 23px 7px var(--gray);
 }
 
-
+header {
+    background-color: var(--violet-bg) ;
+}
 
 header h1 {
     float:left;
     width: 45%;
     min-width: 200px;
+    position: relative;
+    left: 50px;
 }
 
 header h1 a {
@@ -104,7 +111,7 @@ header h1 a {
 
 header nav {
     float:right;
-    width: 55%
+    width: 45%
 }
 
 header nav ul {
@@ -138,9 +145,10 @@ header nav ul li:hover {
 #about {
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 20px 0 60px 0;
     margin: 20px 0;
-    background-image: linear-gradient(to right, rgba(174, 151, 170, 0.3), var(--white));
+    background-image: linear-gradient(to right, var(--violet-bg), var(--white));
  }
    
 #about h2 {
@@ -148,6 +156,7 @@ header nav ul li:hover {
     margin-bottom: 20px;
     font-family: Montserrat, sans-serif;
     font-size: 2.3rem;
+    font-weight: 700;
     color: var(--dark);
 }
 
@@ -156,11 +165,12 @@ header nav ul li:hover {
     align-self: center;
     background-color: var(--white);
     padding: 20px;
-    box-shadow: 0px 0px 25px 2px var(--gray);
-    width: 90%;
+    box-shadow: 0px 0px 15px 1px var(--gray);
+    width: 80%;
     height: 85%;
+    min-height:270px;
     font-family: Tajawal, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 400;
     color: var(--dark);
     overflow: auto;
@@ -178,13 +188,13 @@ header nav ul li:hover {
 
 .photo img {
     display: block;
-    max-width:150px;
+    max-width:120px;
     max-height:auto;
     border-radius: 50%;
-    box-shadow: 0px 0px 25px 2px var(--gray);
+    box-shadow: 0px 0px 8px 2px var(--gray);
 }
 
-.data ul {
+#about .data ul {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -199,19 +209,58 @@ header nav ul li:hover {
     font-weight: 700;
 }
 
-.data .description {
+#about .data .description {
     overflow: auto;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.description p {
+#about .data .description p {
     flex: 5;
     line-height: 3.5rem;
     margin: 5px 15px; 
 }
 
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0 60px 0;
+    margin: 20px 0;
+    background-image: linear-gradient(to left, var(--violet-bg), var(--white));
+ }
+
+#skills h2 {
+    text-align: right;
+    margin-right: 55px;
+    margin-bottom: 20px;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+
+
+#skills .data ul {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "front back more";
+    text-align: center;
+    justify-items: justify;
+    align-items: center;
+    line-height: 3.7rem;
+    font-size:2.8rem;
+}
+
+#skills .data ul li i {
+    font-size:4.5rem;
+    margin-bottom: 15px;
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -276,9 +325,7 @@ header nav ul li:hover {
         font-size: 3.5em;    
         min-width:300px;    
     }
-    header nav ul {
-        width: 100%;
-    }
+    
     header nav ul li {
         display: block;
         width: 100%;
