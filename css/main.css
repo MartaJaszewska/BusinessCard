@@ -34,6 +34,7 @@ body {
     max-width: 1500px;
     margin: 0 auto;
     background-color: var(--violet-bg) ;
+    
 }
 
 .contener h1 {
@@ -42,8 +43,20 @@ body {
     min-width: 200px;
     position: relative;
     left: 50px;
+    -webkit-animation: slide-left 2s ease-out 0.5s backwards;
+    animation: slide-left 1s ease-out 0.5s backwards;
 }
 
+@keyframes slide-left {
+    0% {
+      -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);}
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+ }
+ }
+  
 .contener h1 a {
     display: flex;
     width: 300px;
@@ -56,10 +69,9 @@ body {
     align-items:center;
 }
 
-
 .contener nav {
     float:right;
-    width: 45%
+    width: 45%;
 }
 
 .contener nav ul {
@@ -257,8 +269,7 @@ body {
 }
 
 #portfolio {
-    max-height: 700px;
-    max-width: 1500px;
+    max-height: 800px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr repeat(2, 3fr);
@@ -286,27 +297,87 @@ body {
 
 .picture {
     overflow: hidden;
-    display: flex;
-    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.picture:hover
+{
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .picture img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 500px;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
 }
 
 .photo1 {
     grid-area: img1;
-    align-items: flex-end;
+    position: relative;
+}
+.link {
+    font-family: Tajawal, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    padding: 25px;
+    position: absolute;
+    display: block;
+}
+
+.link span {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.photo1 .link {
+    background-color: var(--violet-bg);
+    opacity: 0.5;
+	left: 0px;
+    top: 0px;
+    transition: opacity, color 1s ease-in-out;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.photo1:hover .link
+{
+    opacity: 0.9; 
+}
+
+.photo1:hover .link span {
+    color: var(--dark);
+}
+
+.button {
+    position: absolute;
+    display: block;
+    left: 25px;
+    bottom: 25px;
+	background-color: var(--violet-bg);
+	border-radius:6px;
+	border:1px solid var(--violet);
+	display:inline-block;
+	color:var(--dark);
+	font-family: Tajawal;
+	font-size:15px;
+	font-weight:bold;
+	padding: 24px 24px;
+	text-decoration:none;
+}
+
+.button:hover {
+	background:linear-gradient(to bottom, var(--violet-bg) 5%, var(--gray) 100%);
 }
 
 .photo2 {
     grid-area: img2;
 }
+
+
 
 .photo3 {
     grid-area: img3;
@@ -318,12 +389,10 @@ body {
 
 .photo5 {
     grid-area: img5;
-    align-items: flex-end;
 }
 
 .photo5  {
     grid-area: img5;
-    align-items: flex-end;
 }
 
 .photo4 img {
@@ -334,6 +403,22 @@ body {
 .photo5 img {
     width: 100%;
     height: 400px;
+}
+
+footer {
+    margin-top: 10px;
+    border-top: 2px solid var(--gray);
+    background: url(../img/vertical-waves.png) top left repeat;
+      
+}
+
+footer h6 {
+    font-family: Montserrat;
+    color: var(--dark);
+    font-size: 2rem;
+    padding: 25px 0;
+    text-align: center;
+
 }
 
 
