@@ -15,10 +15,80 @@
     display: block;
     clear: both;
 }
+
+html {
+    background-color: var(--white);
+    font-family: Montserrat, sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 23px 7px var(--gray);
+}
+
 .contener {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
+    background-color: var(--violet-bg) ;
+}
+
+.contener h1 {
+    float:left;
+    width: 45%;
+    min-width: 200px;
+    position: relative;
+    left: 50px;
+}
+
+.contener h1 a {
+    display: flex;
+    width: 300px;
+    height: 60px;
+    margin: 5px 0;
+    color: var(--gray);
+    font-size: 3rem;
+    font-weight: 400;
+    text-decoration:none;
+    align-items:center;
+}
+
+
+.contener nav {
+    float:right;
+    width: 45%
+}
+
+.contener nav ul {
+    display: table;
+    width: 100%;
+}
+
+.contener nav ul li {
+    display: table-cell;
+    height: 70px;
+    width:25%;
+    min-width:100px;
+    line-height: 70px;
+    font-size: 1.8rem;
+    color: var(--dark);
+    text-transform: uppercase;
+    text-align:center;
+    text-decoration:none;   
+}
+
+.contener nav ul li a {
+    display: block;   
+}
+
+.contener nav ul li:hover {
+    background: var(--orange);
+    opacity:0.5;
+    color: var(--white);
+    font-weight: 700;
 }
 
 .welcome-bg {
@@ -46,7 +116,6 @@
     line-height: 1.5em;
     background:rgba(85, 84, 84, 0.6);
     min-width: 400px;
-    
 }
 
 .welcome h2 {
@@ -68,80 +137,8 @@
     font-size:2.5rem;
     color: var(--dark);
     margin: 0 6px;
-
 }
 
-html {
-    background-color: var(--white);
-    font-family: Montserrat, sans-serif;
-    font-size: 62.5%;
-}
-
-body {
-    width:95%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0px 0px 23px 7px var(--gray);
-}
-
-header {
-    background-color: var(--violet-bg) ;
-}
-
-header h1 {
-    float:left;
-    width: 45%;
-    min-width: 200px;
-    position: relative;
-    left: 50px;
-}
-
-header h1 a {
-    display: flex;
-    width: 300px;
-    height: 60px;
-    margin: 5px 0;
-    color: var(--gray);
-    font-size: 3rem;
-    font-weight: 400;
-    text-decoration:none;
-    align-items:center;
-}
-
-
-header nav {
-    float:right;
-    width: 45%
-}
-
-header nav ul {
-    display: table;
-    width: 100%;
-}
-
-header nav ul li {
-    display: table-cell;
-    height: 70px;
-    width:25%;
-    min-width:100px;
-    line-height: 70px;
-    font-size: 1.8rem;
-    color: var(--dark);
-    text-transform: uppercase;
-    text-align:center;
-    text-decoration:none;   
-}
-
-header nav ul li a {
-    display: block;   
-}
-
-header nav ul li:hover {
-    background: var(--orange);
-    opacity:0.5;
-    color: var(--white);
-    font-weight: 700;
-}
 #about {
     display: flex;
     flex-direction: column;
@@ -222,7 +219,6 @@ header nav ul li:hover {
     margin: 5px 15px; 
 }
 
-
 #skills {
     display: flex;
     flex-direction: column;
@@ -233,16 +229,14 @@ header nav ul li:hover {
  }
 
 #skills h2 {
-    text-align: right;
-    margin-right: 55px;
+    text-align: left;
+    margin-left: 55px;
     margin-bottom: 20px;
     font-family: Montserrat, sans-serif;
     font-size: 2.3rem;
     font-weight: 700;
     color: var(--dark);
 }
-
-
 
 #skills .data ul {
     flex: 1;
@@ -263,8 +257,8 @@ header nav ul li:hover {
 }
 
 #portfolio {
-    border:2px solid red;
-    height: 700px;
+    max-height: 700px;
+    max-width: 1500px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr repeat(2, 3fr);
@@ -274,36 +268,72 @@ header nav ul li:hover {
         "img1 img1 img4 img4 img4 img5";  
 }
 
-#portfolio > header {
+#portfolio header {
     grid-area: header;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+}
+
+#portfolio header h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+
+.picture {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.picture img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 100%;
+    /* object-fit: cover; */
 }
 
 .photo1 {
     grid-area: img1;
-    overflow: hidden;
+    align-items: flex-end;
 }
 
 .photo2 {
     grid-area: img2;
-    overflow: hidden;
 }
 
 .photo3 {
     grid-area: img3;
-    overflow: hidden;
+    
 }
 .photo4 {
     grid-area: img4;
-    overflow: hidden;
 }
 
 .photo5 {
     grid-area: img5;
-    overflow: hidden;
+    align-items: flex-end;
+}
+
+.photo5  {
+    grid-area: img5;
+    align-items: flex-end;
+}
+
+.photo4 img {
+    width: 730px;
+    height: 100%;
+}
+
+.photo5 img {
+    width: 100%;
+    height: 400px;
 }
 
 
