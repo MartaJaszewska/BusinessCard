@@ -262,6 +262,50 @@ header nav ul li:hover {
     margin-bottom: 15px;
 }
 
+#portfolio {
+    border:2px solid red;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr repeat(2, 3fr);
+    grid-template-areas: 
+        "header header header header header header"
+        "img1 img1 img2 img2 img3 img3"
+        "img1 img1 img4 img4 img4 img5";  
+}
+
+#portfolio > header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.photo1 {
+    grid-area: img1;
+    overflow: hidden;
+}
+
+.photo2 {
+    grid-area: img2;
+    overflow: hidden;
+}
+
+.photo3 {
+    grid-area: img3;
+    overflow: hidden;
+}
+.photo4 {
+    grid-area: img4;
+    overflow: hidden;
+}
+
+.photo5 {
+    grid-area: img5;
+    overflow: hidden;
+}
+
 
 @media screen and (max-width: 1024px) {
     .contener {
