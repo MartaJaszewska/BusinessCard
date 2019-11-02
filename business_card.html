@@ -8,7 +8,8 @@
         <meta name="keywords" content="busines card, wizytówka, Marta Jaszewska, cv">
         <meta name="author" content="Marta Jaszewska">
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/main.css"> 
+        <link rel="stylesheet" href="css/main2.css"> 
+        <link rel="stylesheet" href="css/media.css"> 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">       
         <link href="https://fonts.googleapis.com/css?family=Tajawal:400,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/f939dacb57.js" crossorigin="anonymous"></script>
@@ -17,11 +18,11 @@
         <header class="contener floatfix">
             <h1><a href="business_card.html" title="Home page">Jaszewska</a></h1>
             <nav>
-                <ul>
-                    <li>About Me</li>
-                    <li>Skills</li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
+                <ul class="menu">
+                    <li><a class="navlink" href="#">About Me</a></li>
+                    <li><a class="navlink" href="#">Skills</a></li>
+                    <li><a class="navlink" href="#">Portfolio</a></li>
+                    <li><a class="navlink" href="#">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,8 +31,12 @@
                 <h1>Welcome</h1>
                 <h2>feel free and find out</h2>
                 <div class="icons">
-                    <a class="link" href="#" target="_blank"><span class="icon"><i class="fab fa-github"></i></span></a>
-                    <a class="link" href="#" target="_blank"><span class="icon"><i class="fab fa-linkedin"></i></span></a>
+                        <span class="icon">
+                            <a class="iconlink" href="https://github.com/MartaJaszewska" target="_blank"><i class="fab fa-github"></a></i>
+                        </span>
+                        <span class="icon">
+                            <a class="iconlink" href="www.linkedin.com/in/marta-jaszewska" target="_blank"><i class="fab fa-linkedin"></a></i>
+                        </span>                
                 </div>
 
             </div>
@@ -42,14 +47,14 @@
             <h2>About me</h2>
             <div class="data">
                 <div class="photo">
-                    <img src="marta.jpg" alt="my photo">
+                    <img src="img/marta.jpg" alt="my photo">
                 </div>
                 <ul>
                     <li>Full Name: <span>Marta Jaszewska</span></li>
-                    <li>Age: <span>32</span></li>
+                    <li>Age: <span>21</span></li>
                     <li>Profile: <span>Lerner</span></li>
                     <li>Phone: <span>+48 123 456 789</span></li>
-                    <li>e-mail: <span>jaszewska.marta@gmail.com</span></li>
+                    <li>e-mail: <span>jaszewska@marta.com</span></li>
                 </ul>
                 <div class="description">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus tempora odit porro vitae. 
@@ -62,9 +67,9 @@
             <h2>Skills</h2>
             <div class="data">
                 <ul>
-                    <li class="front"><i class="fas fa-desktop"></i><br><span>Front End</span><br>HTML, CSS, JavaScript</li>
-                    <li class="back"><i class="fas fa-code"></i><br><span>Back End</span><br>Python</li>
-                    <li class="more"><i class="far fa-copy"></i><br><span>And More</span><br>GitHub, Git</li>
+                    <li><i class="fas fa-desktop"></i><br><span>Front End</span><br>HTML, CSS, JavaScript</li>
+                    <li><i class="fas fa-code"></i><br><span>Back End</span><br>Python</li>
+                    <li><i class="far fa-copy"></i><br><span>And More</span><br>GitHub, Git</li>
                 </ul>
             </div>
         </section>
@@ -75,7 +80,7 @@
             <div class="picture photo1"> 
                 <a href="#"><img src="img/img2.jpg" alt="img1"></a>
                 <a class="link" href="#"><p><span>Front End<br></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore minima ratione, dolorum est molestias earum omnis beatae iure possimus expedita doloremque.</p></a>
-                <a class="button" href="#">View</a>
+                <a class="button" href="#">More</a>
             </div>
             <div class="picture photo2"> 
                 <img src="img/img1.jpg" alt="img2">
@@ -93,7 +98,6 @@
         <footer>
             <h6>2019 Marta Jaszewska</h6>
         </footer>
-
     </body>
 
 </html>

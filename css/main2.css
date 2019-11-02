@@ -19,32 +19,27 @@
 html {
     background-color: var(--white);
     font-family: Montserrat, sans-serif;
-    font-size: 62.5%;
+    font-size: 65%;
 }
 
 body {
     width:95%;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 0px 23px 7px var(--gray);
 }
 
 .contener {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
     background-color: var(--violet-bg) ;
-    /* position: relative; */
-
     
 }
 
 .contener h1 {
     float:left;
     width: 45%;
-    min-width: 200px;
-    /* position:absolute; */
-    left: 25px;
+    min-width: 300px;
+    text-transform: uppercase;
     -webkit-animation: slide-left 2s ease-out 0.5s backwards;
     animation: slide-left 1s ease-out 0.5s backwards;
 }
@@ -62,7 +57,7 @@ body {
     display: flex;
     width: 300px;
     height: 60px;
-    margin: 5px 0;
+    margin: 5px 15px;
     color: var(--gray);
     font-size: 3rem;
     font-weight: 400;
@@ -83,7 +78,13 @@ body {
 .contener nav ul li {
     display: table-cell;
     width: 25%;
+    border-right: 3px dotted var(--orange)
     
+}
+
+.contener nav ul li:first-child {
+    border-left: 3px dotted var(--orange)
+
 }
 
 .contener nav ul li a {
@@ -94,17 +95,19 @@ body {
     color: var(--dark);
     text-transform: uppercase;
     text-align:center;
-    text-decoration:none;      
+    text-decoration:none;
+    min-width: 100px;  
+    
 }
 
-.contener nav ul li:hover {
+.contener nav ul li:hover a {
     background: var(--orange);
     opacity:0.5;
     color: var(--white);
 }
 
 .welcome-bg {
-    height: 442px;
+    max-height: auto;
     width: 100%;
     background: url("welcome-bg.jpg") left center no-repeat;
     background-size: cover;
@@ -117,7 +120,6 @@ body {
 .welcome {
     text-align: center;
     padding-top: 180px;
-    font-family: 'Tajawal', sans-serif;
 }
 
 .welcome h1 {
@@ -132,6 +134,7 @@ body {
 
 .welcome h2 {
     font-size: 4.5em;
+    font-family: Tajawal, sans-serif;
     color: var(--dark);
     opacity: 0.9;
     background: rgba(138, 138, 138, 0.3);
@@ -142,7 +145,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
+    margin-bottom: 20px;
 }
 
 .iconlink {
@@ -151,16 +154,17 @@ body {
     margin: 5px;
 }
 
-#about {
+#about, #skills {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 20px 0 60px 0;
-    margin: 20px 0;
+    margin: 10px 0 0 0;
     background-image: linear-gradient(to right, var(--violet-bg), var(--white));
  }
-   
-#about h2 {
+
+ #about h2,
+ #skills h2 {
     margin-left: 55px;
     margin-bottom: 20px;
     font-family: Montserrat, sans-serif;
@@ -177,81 +181,66 @@ body {
     box-shadow: 0px 0px 15px 1px var(--gray);
     width: 80%;
     height: 85%;
-    min-height:270px;
+    min-width:400px;
     font-family: Tajawal, sans-serif;
     font-size: 2.1rem;
     font-weight: 400;
     color: var(--dark);
-    overflow: auto;
 }
 
 .photo {
-    flex: 1;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     position:relative;
     bottom: 30px;
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 150px;
+    min-height: 150px;
+    padding-right: 20px;
 }
 
 .photo img {
     display: block;
-    max-width:120px;
-    max-height:auto;
+    width:120px;
+    height:auto;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 1px var(--orange);
 }
 
 #about .data ul {
-    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    line-height: 3.7rem;
+    line-height: 3.5rem;
     min-width: 350px;
 }
 
-.data ul li span {
+#about .data ul li span {
     color: var(--orange);
     font-weight: 700;
-    letter-spacing: 0.2rem;
-    
+    letter-spacing: 0.2rem; 
 }
 
 #about .data .description {
     overflow: auto;
     display: flex;
-    justify-content: left;
+    text-align: justify;
     align-items: center;
 }
 
 #about .data .description p {
-    flex: 5;
     line-height: 3.5rem;
     margin: 5px 15px; 
 }
 
-#skills {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px 0 60px 0;
-    margin: 20px 0;
-    background-image: linear-gradient(to left, var(--violet-bg), var(--white));
- }
 
-#skills h2 {
-    text-align: left;
-    margin-left: 55px;
-    margin-bottom: 20px;
-    font-family: Montserrat, sans-serif;
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: var(--dark);
+#skills {
+    flex-wrap: nowrap;
+    margin: 0 0 10px 0;
+    background-image: linear-gradient(to left, var(--violet-bg), var(--white));
+
 }
 
 #skills .data ul {
@@ -262,24 +251,34 @@ body {
         "front back more";
     text-align: center;
     justify-items: justify;
-    align-items: center;
+    align-items: baseline;
     line-height: 3.7rem;
     font-size:2.8rem;
 }
-
 #skills .data ul li {
-    padding: 25px;
+    border-left: 3px double var(--orange);
+    height: 100%;
+}
+
+#skills .data ul li:first-child {
+    border: none;
 }
 
 #skills .data ul li i {
     font-size:4.5rem;
+    margin: 25px;
+}
+
+#skills .data ul li span {
+    color: var(--orange);
+    font-weight: 700;
 }
 
 #portfolio {
     max-height: 800px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr repeat(2, 3fr);
+    /* grid-template-columns: repeat(6, 1fr); */
+    grid-template-rows: 0.5fr repeat(2, 3fr);
     grid-template-areas: 
         "header header header header header header"
         "img1 img1 img2 img2 img3 img3"
@@ -295,12 +294,10 @@ body {
 }
 
 #portfolio header h1 {
-    font-family: Montserrat, sans-serif;
     font-size: 2.3rem;
     font-weight: 700;
     color: var(--dark);
 }
-
 
 .picture {
     overflow: hidden;
@@ -334,6 +331,9 @@ body {
     padding: 25px;
     position: absolute;
     display: block;
+    background-color: var(--violet-bg);
+    opacity: 0.5;
+    transition: all color 1s ease-in-out;
 }
 
 .link span {
@@ -342,18 +342,18 @@ body {
 }
 
 .photo1 .link {
-    background-color: var(--violet-bg);
-    opacity: 0.5;
 	left: 0px;
     top: 0px;
-    transition: opacity, color 1s ease-in-out;
     overflow: hidden;
     text-align: justify;
 }
 
-.photo1:hover .link
-{
-    opacity: 0.9; 
+.picture:hover {
+    box-shadow: 0px 0px 23px 7px var(--gray);
+}
+
+.photo1:hover .link {
+    opacity: 0.8;
 }
 
 .photo1:hover .link span {
@@ -385,12 +385,10 @@ body {
     grid-area: img2;
 }
 
-
-
 .photo3 {
-    grid-area: img3;
-    
+    grid-area: img3; 
 }
+
 .photo4 {
     grid-area: img4;
 }
@@ -403,119 +401,16 @@ body {
     grid-area: img5;
 }
 
-.photo4 img {
-    
-}
-
-.photo5 img {
-    
-}
-
 footer {
-    margin-top: 10px;
-    border-top: 2px solid var(--gray);
+    border-top: 1px solid var(--gray);
     background: url(../img/vertical-waves.png) top left repeat;
-      
 }
 
 footer h6 {
-    font-family: Montserrat;
-    color: var(--dark);
-    font-size: 2rem;
-    padding: 25px 0;
+    font-family: Montserrat, sans-serif;
+    color: var(--violet);
+    font-size: 1.5rem;
+    padding: 20px 0;
     text-align: center;
-
 }
 
-
-@media screen and (max-width: 1024px) {
-    .contener {
-        width:90%;
-    }
-
-    #about {
-        width: 100%;
-    }
-
-    .data {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-    .contener {
-        width:95%;
-    }
-   
-    .contener h1  {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .contener h1 a {
-        display: flex;
-        justify-content: center;
-
-    }     
-    .contener nav {
-        width:100%
-    } 
-
-    .data ul {
-        margin: 0 25px;
-    }
-
-    .description p {
-        
-        text-align: justify;
-        margin: 25px;
-    }
-}
-
-
-
-@media screen and (max-width: 480px) {
-    body {
-        width:100%;
-        margin: 0;
-    }
-    
-    .welcome h1 {
-        font-size: 7.5em;
-        min-width:300px;
-    }
-    .welcome h2 {
-        font-size: 3.5em;    
-        min-width:300px;    
-    }
-    
-    .contener nav ul li {
-        display: block;
-        width: 100%;
-        height: 30px;
-        font-size: 1.5rem;
-        line-height: 30px;
-        border-bottom: 1px solid var(--orange);
-    }  
-    #about h2 {
-        text-align: center;
-        width: 100%;
-        margin-left: 0;
-    }  
-    .data {
-        width: 80%;
-        min-width: 400px;
-    }
-
-    .data ul {
-        font-size: 2.2rem;
-        
-    }
-
-    .description p {
-        font-size: 2.2rem;
-        text-align: justify;
-    }
-}

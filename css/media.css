@@ -1,0 +1,158 @@
+:root {
+    --white: rgb(255, 255, 255);
+    --dark: rgb(85, 84, 84);
+    --gray: rgb(138, 138, 138);
+    --violet: rgb(174, 151, 170);
+    --pink: rgb(226, 161, 176);
+    --peach: rgb(255, 176, 156);
+    --orange: rgb(255, 206, 125);
+    --yellow: rgb(249, 248, 113);
+    --violet-bg: rgba(174, 151, 170, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+
+    html {
+        font-size: 55%;
+
+    }
+    .contener h1 {
+        width: 100%;
+    }
+    .contener h1 a {
+      width:100%;
+      margin:0;
+      justify-content: center;
+    }
+  
+    .contener nav {
+        width: 100%;
+    }
+
+    .data {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .data .description {
+        margin-top: 25px;
+    }
+
+    .photo {
+        position: static;
+
+    }
+}
+    
+@media screen and (max-width: 768px) {
+    .welcome  {
+        /* font-size: 80%; */
+    }  
+    
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 50%;
+
+    }
+    body {
+        width: 100%;
+    }
+  
+    .contener nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    .contener nav ul li a {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid var(--orange);
+    }
+
+    .data {
+        background: var(--violet-bg);
+        /* background: linear-gradient(to right, var(--pink), var(--violet)); */
+    }
+
+    .data ul li {
+        line-height: 2.5rem;
+    }
+
+    #about, #skills {
+        padding: 15px 0 0 0;
+        margin: 0;
+    }
+   
+    #about .data .description {
+        margin-left:  5px;
+        margin-right:  5px;
+        max-height: 100%;
+        border-top: 2px dotted var(--orange)
+    }
+    
+    #skills .data ul {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "front"
+            "back"
+            "more";
+    }
+   
+
+    #skills .data ul li {
+        width:100%;
+        border-left:none;
+    }
+
+    #skills .data ul li i {
+    margin: 20px 0;      
+    }
+
+    #skills .data ul li:first-child i {
+        margin-top:0;
+    }
+
+    #portfolio header h1 {
+        padding: 15px;;
+    }
+
+    #portfolio {
+        grid-template-areas: none;
+        grid-template-rows: none;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 100%;
+
+    }
+
+    .picture {
+        max-height: 200px;
+    }
+
+    .picture:hover
+{
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+    .link {
+        display: none;
+    }
+
+    .photo1:hover .link {
+        display: block;
+    }
+
+    .button {
+        left: 25px;
+        bottom: 25px;
+        padding: 12px 20px;
+    }
+
+    footer h6 {
+        padding: 15px 0;
+    
+}
