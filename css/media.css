@@ -80,8 +80,8 @@
     }
    
     #about .data .description {
-        margin-left:  5px;
-        margin-right:  5px;
+        margin-left:  10px;
+        margin-right:  10px;
         max-height: 100%;
         border-top: 2px dotted var(--orange)
     }
