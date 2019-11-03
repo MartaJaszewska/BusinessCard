@@ -1,13 +1,11 @@
 :root {
     --white: rgb(255, 255, 255);
-    --dark: rgb(85, 84, 84);
-    --gray: rgb(138, 138, 138);
-    --violet: rgb(174, 151, 170);
-    --pink: rgb(226, 161, 176);
-    --peach: rgb(255, 176, 156);
-    --orange: rgb(255, 206, 125);
-    --yellow: rgb(249, 248, 113);
-    --violet-bg: rgba(174, 151, 170, 0.1);
+    --dark: rgb(62, 71, 86);
+    --gray: rgb(184, 184, 184);
+    --violet: rgb(221, 42, 156);
+    --pink: rgb(248, 108, 134);
+    --orange: rgb(255, 188, 81);
+    --violet-bg: rgba(62, 71, 86, 0.1);
 }
 
 .floatfix::after {
@@ -27,12 +25,11 @@ body {
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 0px 23px 7px var(--gray);
+    box-shadow: 0px 0px 15px 5px var(--gray);
 }
 
 .contener {
     background-color: var(--violet-bg) ;
-    
 }
 
 .contener h1 {
@@ -50,8 +47,8 @@ body {
             transform: translateY(-50px);}
     100% {
       -webkit-transform: translateY(0);
-              transform: translateY(0);
- }}
+              transform: translateY(0);}
+}
   
 .contener h1 a {
     display: flex;
@@ -78,13 +75,11 @@ body {
 .contener nav ul li {
     display: table-cell;
     width: 25%;
-    border-right: 3px dotted var(--orange)
-    
+    border-right: 3px dotted var(--orange)  
 }
 
 .contener nav ul li:first-child {
     border-left: 3px dotted var(--orange)
-
 }
 
 .contener nav ul li a {
@@ -97,7 +92,6 @@ body {
     text-align:center;
     text-decoration:none;
     min-width: 100px;  
-    
 }
 
 .contener nav ul li:hover a {
@@ -205,7 +199,7 @@ body {
     width:120px;
     height:auto;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 1px var(--orange);
+    box-shadow: 0px 0px 1px 1px var(--orange);
 }
 
 #about .data ul {
@@ -235,12 +229,10 @@ body {
     margin: 5px 15px; 
 }
 
-
 #skills {
     flex-wrap: nowrap;
     margin: 0 0 10px 0;
     background-image: linear-gradient(to left, var(--violet-bg), var(--white));
-
 }
 
 #skills .data ul {
@@ -255,6 +247,7 @@ body {
     line-height: 3.7rem;
     font-size:2.8rem;
 }
+
 #skills .data ul li {
     border-left: 3px double var(--orange);
     height: 100%;
@@ -303,8 +296,7 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-.picture:hover
-{
+.picture:hover {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
@@ -343,12 +335,13 @@ body {
 .photo1 .link {
 	left: 0px;
     top: 0px;
+    max-height: 120px;
     overflow: hidden;
     text-align: justify;
 }
 
 .picture:hover {
-    box-shadow: 0px 0px 23px 7px var(--gray);
+    box-shadow: 0px 0px 15px 1px var(--gray);
 }
 
 .photo1:hover .link {
@@ -365,7 +358,7 @@ body {
     bottom: 25px;
 	background-color: var(--violet-bg);
 	border-radius:6px;
-	border:1px solid var(--violet);
+	border:1px solid var(--dark);
 	display:inline-block;
 	color:var(--dark);
 	font-family: Tajawal;
@@ -404,6 +397,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 25px 0;
+    margin: 0 auto;
 }
 
 form {
@@ -411,83 +405,103 @@ form {
     grid-template-columns: 4fr 6fr;
     grid-template-areas: 
     "box1 box2";
-    width: 70%;
     padding:  0;
+    overflow:auto;
+    border: 1px solid var(--gray)
 }
 
 .box1 {
     grid-area: box1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    min-width: 200px;
 }
 
 .box2 {
     grid-area: box2;
+    position:relative;
+    max-width: 600px;
 }
 
 .box {
-    width:100%;
     background: var(--orange);
-    
+}
+
+.cicon a {
+    color: var(--white);
+    font-size:2rem;
+}
+
+.cicon a:nth-child(2) {
+    margin-left: 15px;
+}
+
+.box1 p,
+.cicon {
+    color: var(--white);
+    font-size:1.7rem;
+    line-height: 3rem;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-right: 25px;
+}
+
+.box1 p {
+    flex-direction:column;
+    align-self: center;
+}
+
+.box1 p:nth-of-type(2) {
+    align-self: flex-end;
 }
 
 
-.box h1 { 
+.box1 p span {
+    font-weight: 700;
+}
+
+.box2 h1 { 
     color:var(--white);
     font-size:2.1rem;
     font-weight: 700;
     text-transform:uppercase;
     padding:10px 0 10px 10px;
-   
 }
 
 .box2 label {
     display: flex;
-    width:100%;
     background:var(--white);
     padding:10px 0;
     align-items: center;
 }
 
-.box2 label span {
-    color:var(--dark);
-    font-size:1.5rem;
-    min-width:100px;
-    margin: 0 10 0 0px;
-    text-align: right;    
-}
-
-.box2 .in {
+.box2 .in {    
     padding:10px 10px;
     width:100%;
     margin: 0 15px;
     background: var(--violet-bg);
     border-radius: 11px;
     border:none;
-
+    color: var(--dark);
+    font-family: Tajawal;
+    font-size: 1.5rem;
 }
 
 .box2 .message {
-    padding:10px 10px;
-    width:100%;
-    margin: 0 15px;
-    background: var(--violet-bg);
     overflow:hidden;
-    height:100px;
-    border-radius: 11px;
-    border:none;
-
+    min-height:100px;
+    min-width: 200px;
 }
 
 .box2 label input:last-child {
-    position: relative;
+    position:relative;
 }
 
 .box2 .button2	{
-    position: absolute;
-    top: 40px;
-    left:0px;
+    bottom: -35px;
+    left:-15px;
     padding: 10px 25px;
     margin: 0 10px;
-    
 }
 
 footer {
@@ -497,9 +511,8 @@ footer {
 
 footer h6 {
     font-family: Montserrat, sans-serif;
-    color: var(--violet);
+    color: var(--dark);
     font-size: 1.5rem;
     padding: 20px 0;
     text-align: center;
 }
-

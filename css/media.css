@@ -1,24 +1,23 @@
 :root {
     --white: rgb(255, 255, 255);
-    --dark: rgb(85, 84, 84);
-    --gray: rgb(138, 138, 138);
-    --violet: rgb(174, 151, 170);
-    --pink: rgb(226, 161, 176);
-    --peach: rgb(255, 176, 156);
-    --orange: rgb(255, 206, 125);
-    --yellow: rgb(249, 248, 113);
-    --violet-bg: rgba(174, 151, 170, 0.1);
+    --dark: rgb(62, 71, 86);
+    --gray: rgb(184, 184, 184);
+    --violet: rgb(221, 42, 156);
+    --pink: rgb(248, 108, 134);
+    --orange: rgb(255, 188, 81);
+    --violet-bg: rgba(62, 71, 86, 0.1);
 }
 
 @media screen and (max-width: 1024px) {
 
     html {
         font-size: 55%;
-
     }
+
     .contener h1 {
         width: 100%;
     }
+
     .contener h1 a {
       width:100%;
       margin:0;
@@ -40,22 +39,18 @@
 
     .photo {
         position: static;
-
     }
 }
     
 @media screen and (max-width: 768px) {
-    .welcome  {
-        /* font-size: 80%; */
-    }  
-    
+        
 }
 
 @media screen and (max-width: 480px) {
     html {
         font-size: 50%;
-
     }
+
     body {
         width: 100%;
     }
@@ -73,7 +68,6 @@
 
     .data {
         background: var(--violet-bg);
-        /* background: linear-gradient(to right, var(--pink), var(--violet)); */
     }
 
     .data ul li {
@@ -99,7 +93,6 @@
             "back"
             "more";
     }
-   
 
     #skills .data ul li {
         width:100%;
@@ -124,19 +117,21 @@
         display: flex;
         flex-wrap: wrap;
         max-height: 100%;
+    }
 
+    .picture:nth-child(odd) {
+        display: none;
     }
 
     .picture {
         max-height: 200px;
     }
 
-    .picture:hover
-{
+    .picture:hover {
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
-}
+    }
 
     .link {
         display: none;
@@ -152,7 +147,44 @@
         padding: 12px 20px;
     }
 
+    form {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "box1"
+        "box2";
+    }
+
+    .box1 {
+        max-height: 220px;
+    }
+
+    .box1 p {
+        justify-self: flex-start;
+        margin: 15px 25px;
+        font-size: 1.9rem;
+    }
+
+    .cicon {
+        justify-self: flex-start;
+        margin: 0 25px;
+    }
+
+    .box1 p:nth-of-type(1) {
+        order: 3;
+    }
+
+    .box2 h1 {
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+
+    .box2 .button2 {
+        bottom: -37px;
+        left: 0;
+        padding: 10px 25px;
+        margin: 0 10px;
+    }
+
     footer h6 {
         padding: 15px 0;
-    
-}
+    }
