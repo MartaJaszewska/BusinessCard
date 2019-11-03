@@ -277,7 +277,6 @@ body {
 #portfolio {
     max-height: 800px;
     display: grid;
-    /* grid-template-columns: repeat(6, 1fr); */
     grid-template-rows: 0.5fr repeat(2, 3fr);
     grid-template-areas: 
         "header header header header header header"
@@ -362,7 +361,6 @@ body {
 
 .button {
     position: absolute;
-    display: block;
     left: 25px;
     bottom: 25px;
 	background-color: var(--violet-bg);
@@ -399,6 +397,97 @@ body {
 
 .photo5  {
     grid-area: img5;
+}
+
+.contact{
+    background-image: linear-gradient(to bottom, var(--violet-bg), var(--white)) ;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-template-areas: 
+    "box1 box2";
+    width: 70%;
+    padding:  0;
+}
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box {
+    width:100%;
+    background: var(--orange);
+    
+}
+
+
+.box h1 { 
+    color:var(--white);
+    font-size:2.1rem;
+    font-weight: 700;
+    text-transform:uppercase;
+    padding:10px 0 10px 10px;
+   
+}
+
+.box2 label {
+    display: flex;
+    width:100%;
+    background:var(--white);
+    padding:10px 0;
+    align-items: center;
+}
+
+.box2 label span {
+    color:var(--dark);
+    font-size:1.5rem;
+    min-width:100px;
+    margin: 0 10 0 0px;
+    text-align: right;    
+}
+
+.box2 .in {
+    padding:10px 10px;
+    width:100%;
+    margin: 0 15px;
+    background: var(--violet-bg);
+    border-radius: 11px;
+    border:none;
+
+}
+
+.box2 .message {
+    padding:10px 10px;
+    width:100%;
+    margin: 0 15px;
+    background: var(--violet-bg);
+    overflow:hidden;
+    height:100px;
+    border-radius: 11px;
+    border:none;
+
+}
+
+.box2 label input:last-child {
+    position: relative;
+}
+
+.box2 .button2	{
+    position: absolute;
+    top: 40px;
+    left:0px;
+    padding: 10px 25px;
+    margin: 0 10px;
+    
 }
 
 footer {
